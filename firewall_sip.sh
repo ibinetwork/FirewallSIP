@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # ########################### ATENCAO! ################################
 #
 #       O padrao desse firewall eh bloquear todo acesso internacional
