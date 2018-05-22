@@ -22,6 +22,7 @@ echo /etc/firewall_sip.sh >> /etc/rc.local
 echo ""
 echo "Executando Firewall"
 /etc/firewall_sip.sh
+rm -Rf /usr/src/FirewallSIP
 clear
 echo ""
 echo "+-+-+-+-+-+-+-+-+-+-+-+";
