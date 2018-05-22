@@ -11,7 +11,7 @@ echo ""
 yum install wget mtr vim mlocate nmap tcpdump mc nano lynx rsync screen htop subversion deltarpm dos2unix bind-utils -y
 updatedb
 cd /usr/src
-svn co https://github.com/ibinetwork/FirewallSIP/trunk/ /usr/src/
+svn co https://github.com/ibinetwork/FirewallSIP/ /usr/src/
 chmod +x firewall_sip.sh
 mv firewall_sip.sh /etc/
 chmod 755 parse.py
