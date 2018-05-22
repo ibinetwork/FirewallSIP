@@ -25,7 +25,7 @@ MAIL_CMD='sendEmail'
 WGET_TIMEOUT='14'
 # HOSTS LIBERADOS PARA SIP
 # (separado por espaco)
-ACC_SIP='192.168.10.0/24 192.168.1.0/24 192.168.0.0/24 172.30.10.0 191.209.125.144 177.70.17.66 200.192.243.50'
+ACC_SIP='192.168.10.0/24 192.168.1.0/24 192.168.0.0/24 172.30.10.0 191.209.125.144'
 NO_SIP=''
 
 # COMANDO BASICOS NECESSARIOS
@@ -47,12 +47,12 @@ alert(){
 OPT=$1
 IP_ADDRESS=`ip r g 200.192.243.50|head -n1|awk '{print $7}'`
 MY_HOSTNAME='Ibinetwork Informática'
-MAIL_FROM='suporte@ibinetwork.com.br'
-MAIL_TO='rafael@ibinetwork.com.br'
+MAIL_FROM=''
+MAIL_TO=''
 MAIL_SUBJECT='SIPFirewall - Problema na Execucao'
-MAIL_SERVER_SMTP='smtp.gmail.com'
-MAIL_USER_SMTP='suporte@ibinetwork.com.br'
-MAIL_PASS_SMTP='12qwaszx'
+MAIL_SERVER_SMTP=''
+MAIL_USER_SMTP=''
+MAIL_PASS_SMTP=''
 MAIL_BODY="
 Erro ao executar $0:
 $OPT
@@ -115,4 +115,3 @@ fi
 
 # REDIR. DE TRAFEGO PARA $CHAIN_NAME
 $IPT -t mangle -I PREROUTING -p UDP --dport $SIP_PORT -j $CHAIN_NAME
-
